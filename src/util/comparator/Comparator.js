@@ -1,36 +1,36 @@
 export default class Comparator {
-    constructor(compareMethod) {
-        this.compare = compareMethod || Comparator.defaultCompareMethod;
-    }
+  constructor(compareMethod) {
+    this.compare = compareMethod || Comparator.defaultCompareMethod;
+  }
 
-    static defaultCompareMethod(a, b) {
-        if (a === b) return 0;
+  static defaultCompareMethod(a, b) {
+    if (a === b) return 0;
 
-        return a < b ? -1 : 1;
-    }
+    return a < b ? -1 : 1;
+  }
 
-    equal(a, b) {
-        return this.compare(a, b) === 0;
-    }
+  equal(a, b) {
+    return this.compare(a, b) === 0;
+  }
 
-    lessThan(a, b) {
-        return this.compare(a, b) < 0;
-    }
+  lessThan(a, b) {
+    return this.compare(a, b) < 0;
+  }
 
-    greaterThan(a, b) {
-        return this.compare(a, b) > 0;
-    }
+  greaterThan(a, b) {
+    return this.compare(a, b) > 0;
+  }
 
-    lessThanOrEqual(a, b) {
-        return this.lessThan(a, b) || this.equal(a, b);
-    }
+  lessThanOrEqual(a, b) {
+    return this.lessThan(a, b) || this.equal(a, b);
+  }
 
-    greaterThanOrEqual(a, b) {
-        return this.greaterThan(a, b) || this.equal(a, b);
-    }
+  greaterThanOrEqual(a, b) {
+    return this.greaterThan(a, b) || this.equal(a, b);
+  }
 
-    reverse() {
-        const originalComparison = this.compare;
-        this.compare = (a, b) => originalComparison(b, a);
-    }
+  reverse() {
+    const originalComparison = this.compare;
+    this.compare = (a, b) => originalComparison(b, a);
+  }
 }
