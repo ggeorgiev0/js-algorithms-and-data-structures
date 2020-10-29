@@ -1,0 +1,22 @@
+{
+  "name": "js-algorithms-and-data-structures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ggeorgiev0/js-algorithms-and-data-structures.git",
+  "author": "Georgi Georgiev <ggeorgiev@fmsystems.com>",
+  "license": "none",
+  "scripts": {
+    "code:check": "yarn code:lint && yarn code:prettier",
+    "code:format": "yarn code:lint --fix --quiet && yarn code:prettier --write",
+    "code:lint": "eslint .",
+    "code:prettier": "prettier --check \"**/*.js*\""
+  },
+  "dependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "prettier": "^1.19.1"
+  }
+}
