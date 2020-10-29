@@ -9,14 +9,21 @@
     "code:check": "yarn code:lint && yarn code:prettier",
     "code:format": "yarn code:lint --fix --quiet && yarn code:prettier --write",
     "code:lint": "eslint .",
-    "code:prettier": "prettier --check \"**/*.js*\""
+    "code:prettier": "prettier --check \"**/*.js*\"",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-jest": "^23.18.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-import": "^2.18.2",
+    "jest": "^26.6.1",
     "prettier": "^1.19.1"
   }
 }
