@@ -147,7 +147,7 @@ export default class DoublyLinkedList {
       const deletedTail = this.tail;
       this.head = null;
       this.tail = null;
-      
+
       return deletedTail;
     }
 
@@ -201,7 +201,7 @@ export default class DoublyLinkedList {
    * @return {DoublyLinkedList}
    */
   fromArray(values) {
-    values.forEach(value => this.append(value));
+    values.forEach((value) => this.append(value));
 
     return this;
   }
@@ -211,7 +211,9 @@ export default class DoublyLinkedList {
    * @return {string}
    */
   toString(cb) {
-    return this.toArray().map(node => node.toString(cb)).toString();
+    return this.toArray()
+      .map((node) => node.toString(cb))
+      .toString();
   }
 
   reverse() {
@@ -225,7 +227,7 @@ export default class DoublyLinkedList {
 
       currentNode.next = previousNode;
       currentNode.previous = nextNode;
-      
+
       previousNode = currentNode;
       currentNode = nextNode;
     }
