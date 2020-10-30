@@ -3,7 +3,7 @@ import LinkedList from '../linked-list/LinkedList';
 export default class Queue {
   constructor() {
     /**
-     * Queues are similar to linked lists, 
+     * Queues are similar to linked lists,
      * because they both operate on elements at the beginning and at the end.
      */
     this.linkedList = new LinkedList();

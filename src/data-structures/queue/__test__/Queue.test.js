@@ -2,7 +2,7 @@ import Queue from '../Queue';
 
 describe('Queue', () => {
   let queue = null;
-  
+
   beforeEach(() => {
     queue = new Queue();
   });
@@ -27,7 +27,7 @@ describe('Queue', () => {
     queue.enqueue({ value: 'test1', key: 'key1' });
     queue.enqueue({ value: 'test2', key: 'key2' });
 
-    const stringifier = arg => `${arg.key}:${arg.value}`;
+    const stringifier = (arg) => `${arg.key}:${arg.value}`;
 
     expect(queue.toString(stringifier)).toBe('key1:test1,key2:test2');
     expect(queue.dequeue().value).toBe('test1');

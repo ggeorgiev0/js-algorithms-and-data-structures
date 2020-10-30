@@ -47,7 +47,7 @@ describe('DoublyLinkedListNode', () => {
   it('should convert a node to a string with a custom stringifier', () => {
     const nodeValue = { value: 1, key: 'test' };
     const node = new DoublyLinkedListNode(nodeValue);
-    const stringifier = arg => `value: ${arg.value}, key: ${arg.key}`;
+    const stringifier = (arg) => `value: ${arg.value}, key: ${arg.key}`;
     expect(node.toString(stringifier)).toBe('value: 1, key: test');
   });
 });
